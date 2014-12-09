@@ -1,0 +1,15 @@
+#include "stdio.h" 
+void main() 
+{ 
+int i,j,k,a; 
+
+for(i=1;i<=9;i++) 
+for(j=0;j<=9;j++) 
+for(k=0;k<=9;k++) 
+{ 
+a=i*100+j*10+k; 
+if(a==i*i*i+j*j*j+k*k*k) 
+printf("%d=%d^3+%d^3+%d^3\n",a,i,j,k); 
+} 
+
+}
