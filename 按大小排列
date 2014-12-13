@@ -1,0 +1,47 @@
+#include "stdio.h" 
+void main() 
+{ char c; 
+int a[100]; 
+int i,j,t,M; 
+printf("你想进行升序排列还是降序排列？请按 < 或 > 选择:\n"); 
+scanf("%c",&c); 
+printf("你想对几个数进行排列？\n"); 
+scanf("%d",&M); 
+printf("请输入你要排列的%d个数\n",M); 
+for(i=0;i<M;i++) 
+scanf("%d",&a[i]); 
+printf("排列前的数:\n"); 
+for(i=0;i<M;i++) 
+printf("%d\t",a[i]); 
+
+
+for(i=0;i<M;i++) 
+{ 
+for(j=0;j<M-i-1;j++) 
+{ 
+if(c=='<') 
+{ 
+if(a[j]>a[j+1]) 
+{ 
+t=a[j]; 
+a[j]=a[j+1]; 
+a[j+1]=t; 
+} 
+} 
+if(c=='>') 
+{ 
+if(a[j]<a[j+1]) 
+{ 
+t=a[j]; 
+a[j]=a[j+1]; 
+a[j+1]=t; 
+} 
+} 
+} 
+
+} 
+printf("\n排列后的数:\n"); 
+for(i=0;i<M;i++) 
+printf("%d\t",a[i]); 
+printf("\n"); 
+}
